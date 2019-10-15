@@ -1,0 +1,14 @@
+127.0.0.1 - - [15/Oct/2019:15:36:16 +0200] "GET / HTTP/1.1" 404 996
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:38:55 +0200] "POST /etat/initial HTTP/1.1" 404 1012
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:40:16 +0200] "GET / HTTP/1.1" 404 996
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:40:43 +0200] "POST /AutomateAvecEtat/etat/initial HTTP/1.1" 404 1000
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:41:09 +0200] "GET /AutomateAvecEtat/ HTTP/1.1" 404 1000
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:42:09 +0200] "POST /AutomateAvecEtat/etat/initial HTTP/1.1" 404 1000
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:43:03 +0200] "POST /AutomateAvecEtat/automate/etat/initial HTTP/1.1" 404 1000
+127.0.0.1 - - [15/Oct/2019:15:45:05 +0200] "GET / HTTP/1.1" 404 996
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:45:13 +0200] "POST /AutomateAvecEtat/automate/etat/initial HTTP/1.1" 200 12
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:51:14 +0200] "POST /AutomateAvecEtat/automate/etat/suivant/a HTTP/1.1" 415 1154
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:52:15 +0200] "POST /AutomateAvecEtat/automate/etat/initial HTTP/1.1" 200 12
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:53:07 +0200] "POST /AutomateAvecEtat/automate/etat/suivant/a HTTP/1.1" 415 1154
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:55:54 +0200] "POST /AutomateAvecEtat/automate/etat/suivant/a HTTP/1.1" 415 1154
+0:0:0:0:0:0:0:1 - - [15/Oct/2019:15:56:27 +0200] "POST /AutomateAvecEtat/automate/etat/suivant/a HTTP/1.1" 200 124
