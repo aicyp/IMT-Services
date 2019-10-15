@@ -9,18 +9,18 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 public interface Automate {
-	
+
 	@POST
 	@Path("etat/initial")
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	Session initier();
-	
+
 	@POST
 	@Path("etat/suivant/{lettre}")
 	@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	Resultat accepter(@PathParam("lettre") char x, Session id); 
-	
+
 	@PUT
 	@Path("fin")
 	@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
