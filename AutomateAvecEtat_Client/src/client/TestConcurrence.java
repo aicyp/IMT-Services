@@ -18,7 +18,7 @@ public class TestConcurrence {
 	  WebTarget cible = AppliCliente.clientJAXRS().target(adresse);
 	  Automate automateProxyJersey = WebResourceFactory.newResource(Automate.class, cible);
 
-	  int REQUETES = 1000;
+	  int REQUETES = 10000;
 	  final long incrementations = Stream
 	    .generate(() -> 0)
 	    .limit(REQUETES)

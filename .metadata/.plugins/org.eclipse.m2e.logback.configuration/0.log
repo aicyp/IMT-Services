@@ -601,3 +601,7 @@
 2019-10-15 17:43:08,245 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/axelc/Code/imt_atlantique/mod_concept/AutomateAvecEtat_Client/src/main/resources
 2019-10-15 17:43:08,245 [Worker-98: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2019-10-15 17:43:08,246 [Worker-98: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/axelc/Code/imt_atlantique/mod_concept/AutomateAvecEtat_Client/src/test/resources
+2019-10-15 17:44:37,634 [Worker-97: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-10-15 17:44:37,635 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/axelc/Code/imt_atlantique/mod_concept/AutomateAvecEtat_Client/src/main/resources
+2019-10-15 17:44:37,636 [Worker-97: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-10-15 17:44:37,636 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/axelc/Code/imt_atlantique/mod_concept/AutomateAvecEtat_Client/src/test/resources
