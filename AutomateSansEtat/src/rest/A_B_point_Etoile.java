@@ -1,8 +1,5 @@
 package rest;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.inject.Singleton;
 import javax.ws.rs.Path;
 
@@ -10,46 +7,47 @@ import javax.ws.rs.Path;
 @Singleton
 public class A_B_point_Etoile implements Automate {
 
+	private int compteur;
+
 	private int numeroSession;
-	private Map<Session, Etat> executions;
 
 	public A_B_point_Etoile() {
 		System.out.println("Déploiement de " + this.getClass());
 		numeroSession = 0;
-		executions = new HashMap<Session, Etat>(25);
+		compteur = 0;
 	}
+
 	@Override
 	public Session initier() {
-		ImplemSession s = new ImplemSession();
-		s.setNumero(numeroSession);
+		ImplemSession res = new ImplemSession();
+		res.setNumero(numeroSession);
 		numeroSession++;
-		executions.put(s, Etat.UN);
-		return s;
+		res.setEtatExecution(Etat.UN);
+		return res;
 	}
+
 	@Override
 	public Resultat accepter(char x, Session id) {
-		Etat e = executions.get(id);
+		compteur++;
+		System.out.println("************** requête accepter numéro " + compteur + " *************");
 		ImplemResultat res = new ImplemResultat();
-		res.setId(id);
-		if (e == null) {
-			res.setValide(false);
-			return res;
-		}
+		ImplemSession s = new ImplemSession();
+		res.setId(s);
+		s.setNumero(id.getNumero());
+		Etat e = id.getEtatExecution();
 		if (e.equals(Etat.UN) && (x == 'a')) {
-			executions.put(id, Etat.DEUX);
+			s.setEtatExecution(Etat.DEUX);
 			res.setValide(true);
 			return res;
 		}
 		if (e.equals(Etat.DEUX) && (x == 'b')) {
-			executions.put(id, Etat.UN);
+			s.setEtatExecution(Etat.UN);
 			res.setValide(true);
 			return res;
 		}
+		s.setEtatExecution(e);
 		res.setValide(false);
 		return res;
 	}
-	@Override
-	public void clore(Session id) {
-		executions.remove(id);
-	}
+
 }
