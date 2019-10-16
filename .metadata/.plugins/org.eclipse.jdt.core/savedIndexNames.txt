@@ -1,5 +1,0 @@
-INDEX VERSION 1.131+/Users/axelc/Code/imt_atlantique/mod_concept/.metadata/.plugins/org.eclipse.jdt.core
-1536483232.index
-1608398221.index
-3089774250.index
-787138045.index

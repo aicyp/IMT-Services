@@ -1,3 +1,0 @@
-INDEX VERSION 1.4+/Users/axelc/Code/imt_atlantique/mod_concept/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-787138045.index
-3089774250.index
