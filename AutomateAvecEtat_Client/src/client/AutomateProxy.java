@@ -30,7 +30,7 @@ public class AutomateProxy implements Automate {
 	@Override
 	public Resultat accepter(char x, Session id) {
 		return this.cibleAccepter.path(Character.toString(x)).request(this.typeContenu)
-				.post(Entity.entity(id, this.typeContenu), Resultat.class);
+				.get(Resultat.class);
 	}
 
 	@Override

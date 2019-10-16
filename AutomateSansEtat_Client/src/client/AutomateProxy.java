@@ -1,5 +1,6 @@
 package client;
 
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 
@@ -21,12 +22,13 @@ public class AutomateProxy implements Automate {
 	
 	@Override
 	public Session initier() {
-		return null; // TODO
+		return this.cibleInitier.request(this.typeContenu).post(null, Session.class);
 	}
 
 	@Override
 	public Resultat accepter(char x, Session id) {
-		return null; // TODO
+		return this.cibleAccepter.path(Character.toString(x)).request(this.typeContenu)
+				.post(Entity.entity(id, this.typeContenu), Resultat.class);
 	}
 
 }
