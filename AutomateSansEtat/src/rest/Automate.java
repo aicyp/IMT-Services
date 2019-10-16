@@ -19,7 +19,6 @@ public interface Automate {
 	@GET
 	@Path("etat/suivant/{lettre}")
 	@Consumes({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	Resultat accepter(@PathParam("lettre") char x, @QueryParam("id") Session id); 
 
 }

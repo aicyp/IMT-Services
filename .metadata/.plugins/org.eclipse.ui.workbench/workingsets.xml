@@ -9,6 +9,7 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AutomateAvecEtat" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AutomateAvecEtat_Client" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AutomateSansEtat" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AutomateSansEtat_Client" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1571145726139_2" label="Window Working Set" name="Aggregate for window 1571145726139"/>
 <mruList name="tp1"/>
