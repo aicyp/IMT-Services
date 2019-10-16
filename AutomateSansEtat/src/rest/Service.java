@@ -13,5 +13,6 @@ public class Service extends ResourceConfig {
 		this.register(FournisseurTraduction.class);
 		this.register(JacksonFeature.class);
 		this.register(A_B_point_Etoile.class);
+		this.register(A_B_point_EtoileConcurrent.class);
 	}
 }

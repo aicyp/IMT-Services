@@ -12,7 +12,7 @@ import rest.Session;
 public class TestConcurrence {
 
 	public static void main(String[] args) {
-	  String adresse = "http://localhost:8080/AutomateAvecEtat/automate";
+	  String adresse = "http://localhost:8080/AutomateAvecEtat/automate/concurrent";
 	  System.out.println("*************");
 
 	  WebTarget cible = AppliCliente.clientJAXRS().target(adresse);

@@ -27,7 +27,7 @@ public class AppliCliente {
 
 	public static void main(String[] args) {
 
-		String adresse = "http://localhost:8080/AutomateSansEtat/automate";
+		String adresse = "http://localhost:8080/AutomateSansEtat/automate/concurrent";
 		
 		System.out.println("*************");
 		
