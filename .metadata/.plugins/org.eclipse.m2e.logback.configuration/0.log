@@ -605,3 +605,25 @@
 2019-10-15 17:44:37,635 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/axelc/Code/imt_atlantique/mod_concept/AutomateAvecEtat_Client/src/main/resources
 2019-10-15 17:44:37,636 [Worker-97: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2019-10-15 17:44:37,636 [Worker-97: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/axelc/Code/imt_atlantique/mod_concept/AutomateAvecEtat_Client/src/test/resources
+2019-10-16 18:34:03,121 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-10-16 18:34:07,198 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-10-16 18:34:07,202 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/axelc/Code/imt_atlantique/mod_concept/AutomateAvecEtat/src/main/resources
+2019-10-16 18:34:07,207 [Worker-4: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-10-16 18:34:07,208 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/axelc/Code/imt_atlantique/mod_concept/AutomateAvecEtat/src/test/resources
+2019-10-16 18:39:02,787 [Worker-1: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: AutomateSansEtat:AutomateSansEtat:0.0.1-SNAPSHOT @ /Users/axelc/Code/imt_atlantique/mod_concept/AutomateSansEtat/pom.xml.
+2019-10-16 18:39:02,941 [Worker-1: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AutomateSansEtat/src
+2019-10-16 18:39:02,943 [Worker-1: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /AutomateSansEtat/src/test/java because it overlaps with /AutomateSansEtat/src
+2019-10-16 18:39:03,085 [Worker-1: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-10-16 18:39:03,265 [Worker-1: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: AutomateSansEtat:AutomateSansEtat:0.0.1-SNAPSHOT @ /Users/axelc/Code/imt_atlantique/mod_concept/AutomateSansEtat/pom.xml.
+2019-10-16 18:39:03,326 [Worker-1: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AutomateSansEtat/src
+2019-10-16 18:39:03,326 [Worker-1: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /AutomateSansEtat/src/test/java because it overlaps with /AutomateSansEtat/src
+2019-10-16 18:39:03,389 [Worker-1: Enabling Maven Dependency Management] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for AutomateSansEtat
+2019-10-16 18:39:03,432 [Worker-1: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2019-10-16 18:39:03,603 [Worker-20: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-10-16 18:39:03,604 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/axelc/Code/imt_atlantique/mod_concept/AutomateSansEtat/src/main/resources
+2019-10-16 18:39:03,605 [Worker-20: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2019-10-16 18:39:03,605 [Worker-20: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/axelc/Code/imt_atlantique/mod_concept/AutomateSansEtat/src/test/resources
+2019-10-16 18:39:03,605 [Worker-20: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of AutomateSansEtat
+2019-10-16 18:39:03,606 [Worker-20: Building workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for AutomateSansEtat
+2019-10-16 18:39:03,610 [Worker-20: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.5 is missing, no dependency information available
+2019-10-16 18:39:03,617 [Worker-20: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
