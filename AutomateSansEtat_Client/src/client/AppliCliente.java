@@ -10,6 +10,8 @@ import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.logging.LoggingFeature;
 
 import rest.Automate;
+import rest.Resultat;
+import rest.Session;
 import rest.jaxb.FournisseurTraduction;
 
 public class AppliCliente {
@@ -39,9 +41,27 @@ public class AppliCliente {
 	}
 
 	private static void test(Automate automate) {
-		char[] mot = { 'a', 'b', 'a', 'a', 'a', 'b' };
+		char[] mot = { 'a', 'b', 'a', 'b', 'a', 'b' };
 		// TODO
-		return;
+		Resultat resultat;
+		boolean isValide = true;
+		Session session = automate.initier();
+		
+		for(int i = 0; i < mot.length; i++) {
+			resultat = automate.accepter(mot[i], session);
+			session = resultat.getId();
+			
+			if (isValide == true) {
+				isValide = resultat.isValide();
+			} else {
+				isValide = false;
+			}
+		}
+		
+		if(isValide) {
+			System.out.println("Le mot est valide");
+		} else {
+			System.out.println("Le mot n'est pas valide");
+		}
 	}
-
 }
