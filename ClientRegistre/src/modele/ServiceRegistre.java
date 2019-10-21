@@ -12,6 +12,7 @@ public interface ServiceRegistre {
 	
 	@PUT
 	@Consumes(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_XML)
 	public Ressource set(Ressource n);
 	
 	@GET
