@@ -52,7 +52,7 @@ public class TestRegistre2 {
 
 	public static void main(String[] args) {
 
-		final String adresse = "http://localhost:8080/Registre";
+		final String adresse = "http://localhost:8080/ServeurRegistre";
 
 		ErreurPrecondition412 gestionnaire = new ErreurPrecondition412();
 		WebTarget cible = clientJAXRS(gestionnaire).target(adresse);

@@ -1,5 +1,6 @@
 package infrastructure.jaxrs;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 import javax.annotation.Priority;
@@ -8,8 +9,12 @@ import javax.ws.rs.Priorities;
 import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientResponseContext;
 import javax.ws.rs.client.ClientResponseFilter;
+import javax.ws.rs.core.HttpHeaders;
+import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.Provider;
+
+import infrastructure.entreesSorties.Flots;
 
 @Provider
 @Priority(Priorities.HEADER_DECORATOR)
@@ -45,13 +50,17 @@ public class Cacher implements ClientResponseFilter {
 			// - version stockée dans le champ EntityTag (variable version),
 			// - contenu obtenu par un appel à Flots.convertirFlotEnOctets
 			// (variable contenu).
-			// TODO 
+			// TODO
+			this.cache.typeContenu = reponse.getMediaType();
+			this.cache.version = reponse.getEntityTag();
+			this.cache.contenu = Flots.convertirFlotEnOctets(reponse.getEntityStream());
 			// Attention : comme la fonction Flots.convertirFlotEnOctets vide le
 			// flux entrant,
 			// il est nécessaire de réinitialiser le flux EntityStream de la
 			// réponse
 			// en utilisant un ByteArrayInputStream.
 			// TODO 
+			reponse.setEntityStream(new ByteArrayInputStream(this.cache.contenu));
 			return;
 		}
 		// * Statut NOT_MODIFIED (304)
@@ -64,6 +73,14 @@ public class Cacher implements ClientResponseFilter {
 			// - HttpHeaders.CONTENT_LENGTH
 			// - HttpHeaders.CONTENT_TYPE
 			// TODO 
+			reponse.setEntityStream(new ByteArrayInputStream(this.cache.contenu));
+			
+			reponse.setStatus(Response.Status.OK.getStatusCode());
+			
+			MultivaluedMap<String, String> enTetes = reponse.getHeaders();
+			enTetes.putSingle(HttpHeaders.CONTENT_LENGTH, Integer.toString(this.cache.contenu.length));
+			enTetes.putSingle(HttpHeaders.CONTENT_TYPE, this.cache.typeContenu.toString());
+			
 			return;
 		}
 		// Cas d'une erreur 412 (PUT)
@@ -74,6 +91,9 @@ public class Cacher implements ClientResponseFilter {
 			// - contenu obtenu par un appel à Flots.convertirFlotEnOctets
 			// (variable contenu).
 			// TODO 
+			this.cache.typeContenu = reponse.getMediaType();
+			this.cache.version = reponse.getEntityTag();
+			this.cache.contenu = Flots.convertirFlotEnOctets(reponse.getEntityStream());
 			// Attention : comme la fonction Flots.convertirFlotEnOctets vide le
 			// flux entrant,
 			// il est nécessaire de réinitialiser le flux EntityStream de la
@@ -83,7 +103,8 @@ public class Cacher implements ClientResponseFilter {
 			// Changer le statut de la réponse à OK.
 			// Lever une erreur 412 dans le gestionnaire d'erreur.
 			// TODO
-		    
+		    reponse.setStatus(Response.Status.OK.getStatusCode());
+		    this.gestionnaireErreur.leverErreur412();
 			return;
 		}
 
