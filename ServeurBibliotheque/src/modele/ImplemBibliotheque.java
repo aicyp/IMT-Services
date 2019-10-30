@@ -11,8 +11,12 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentMap;
 import java.util.Set;
 
+import javax.inject.Singleton;
+import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
+@Path("bibliotheque")
+@Singleton
 public class ImplemBibliotheque implements BibliothequeArchive {
 
 	private ConcurrentMap<IdentifiantLivre, Livre> catalogue;
