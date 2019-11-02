@@ -15,8 +15,10 @@ import javax.inject.Singleton;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-@Path("bibliotheque")
+import configuration.JAXRS;
+
 @Singleton
+@Path(JAXRS.CHEMIN_BIBLIO)
 public class ImplemBibliotheque implements BibliothequeArchive {
 
 	private ConcurrentMap<IdentifiantLivre, Livre> catalogue;
