@@ -8,6 +8,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import infrastructure.jaxrs.HyperLien;
+import infrastructure.jaxrs.annotations.ReponsesGETNull404;
+import infrastructure.jaxrs.annotations.ReponsesPOSTCreated;
 
 public interface Archive {
 
@@ -16,11 +18,13 @@ public interface Archive {
 	@GET
 	@Path("id")
 	@Consumes(MediaType.APPLICATION_XML)
+	@ReponsesGETNull404
 	Livre getRepresentation(IdentifiantLivre id);
 	
 	@POST
 	@Path("")
 	@Produces(MediaType.APPLICATION_XML)
 	@Consumes(MediaType.APPLICATION_XML)
+	@ReponsesPOSTCreated
 	HyperLien<Livre> ajouter(Livre l);
 }
