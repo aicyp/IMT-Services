@@ -10,6 +10,7 @@ import javax.ws.rs.core.MediaType;
 
 import infrastructure.jaxrs.HyperLien;
 import infrastructure.jaxrs.HyperLiens;
+import infrastructure.jaxrs.annotations.ReponsesPUTOption;
 import configuration.JAXRS;
 
 public interface Bibliotheque {
@@ -17,6 +18,7 @@ public interface Bibliotheque {
 	@PUT
 	@Path("")
 	@Consumes(MediaType.APPLICATION_XML)
+	@ReponsesPUTOption
 	Optional<HyperLien<Livre>> chercher(Livre l);
 
 	@GET
