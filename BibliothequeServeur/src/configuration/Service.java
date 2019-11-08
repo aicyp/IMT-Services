@@ -5,6 +5,7 @@ import org.glassfish.jersey.logging.LoggingFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import infrastructure.jaxrs.AdapterServeurReponsesPOSTCreated;
+import infrastructure.jaxrs.AdapterServeurReponsesPUTOptionEn404OuValeur;
 import infrastructure.jaxrs.AdapterServeurReponsesGETNullEn404;
 import modele.ImplemBibliotheque;
 import modele.ImplemLivre;
@@ -31,6 +32,7 @@ public class Service extends ResourceConfig {
 		// Enregistrement des filtres (alternative possible via providers)
 		this.register(AdapterServeurReponsesPOSTCreated.class);
 		this.register(AdapterServeurReponsesGETNullEn404.class);
+		this.register(AdapterServeurReponsesPUTOptionEn404OuValeur.class);
 		System.out.println("* Fin du chargement de " + this.getClass());
 	}
 }
