@@ -8,7 +8,6 @@ import configuration.JAXRS;
 
 @XmlRootElement(name="livre")
 public interface Livre {
-	
 	@GET
 	@Path(JAXRS.SOUSCHEMIN_TITRE)
 	String getTitre();
