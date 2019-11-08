@@ -9,6 +9,7 @@ import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.logging.LoggingFeature;
 
 import infrastructure.jaxrs.AdapterClientReponsesPUT404EnOption;
+import infrastructure.jaxrs.AdapterClientResponsesPUTEnOption;
 import infrastructure.jaxrs.AdapterClientReponsesPOSTCreated;
 
 public class JAXRS {
@@ -39,7 +40,7 @@ public class JAXRS {
 		// TODO Adaptateurs
 		config.register(AdapterClientReponsesPOSTCreated.class);
 		config.register(new AdapterClientReponsesPUT404EnOption());
-
+		config.register(AdapterClientResponsesPUTEnOption.class);
 		return ClientBuilder.newClient(config);
 	}
 }
